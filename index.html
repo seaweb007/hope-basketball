@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hope Basketball Academy — Akure, Ondo State</title>
+<meta name="description" content="Akure's premier basketball development program. Professional coaching, competitive pathways, and 20+ players placed since 2015.">
+<link rel="icon" href="favicon_1.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+:root{
+  --maroon:#7A0F0F;
+  --maroon-deep:#4A0808;
+  --maroon-bright:#9C1414;
+  --charcoal:#141110;
+  --charcoal-soft:#211C1A;
+  --cream:#F7F3EC;
+  --stone:#6B625C;
+  --stone-light:#948B84;
+  --gold:#D9A441;
+  --gold-bright:#F0C15C;
+  --white:#FFFFFF;
+  --whatsapp:#25D366;
+  --font-display:'Anton', sans-serif;
+  --font-body:'Manrope', sans-serif;
+  --ease:cubic-bezier(.16,.84,.44,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);background:var(--cream);color:var(--charcoal);line-height:1.65;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+.container{width:90%;max-width:1200px;margin:0 auto;}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;letter-spacing:.5px;line-height:1.1;}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease), transform .8s var(--ease);}
+.reveal.in{opacity:1;transform:translateY(0);}
+.reveal-delay-1{transition-delay:.1s;}
+.reveal-delay-2{transition-delay:.2s;}
+.reveal-delay-3{transition-delay:.3s;}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-body);font-weight:800;font-size:.75rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--gold);display:inline-block;}
+.section-title{font-size:clamp(2rem,4vw,3rem);margin-bottom:16px;color:var(--charcoal);}
+.section-title.on-dark{color:var(--white);}
+.section-sub{color:var(--stone);max-width:640px;font-size:1.05rem;margin-bottom:50px;}
+.section-sub.on-dark{color:var(--stone-light);}
+.section-head{margin-bottom:10px;}
+.section-head.center{text-align:center;margin-left:auto;margin-right:auto;}
+.section-head.center .section-sub{margin-left:auto;margin-right:auto;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--maroon);color:var(--white);padding:15px 34px;border-radius:3px;text-decoration:none;font-weight:700;font-size:.95rem;letter-spacing:.3px;border:2px solid var(--maroon);transition:all .3s var(--ease);cursor:pointer;}
+.btn:hover{background:var(--maroon-deep);border-color:var(--maroon-deep);transform:translateY(-2px);}
+.btn-outline{background:transparent;border-color:var(--white);color:var(--white);}
+.btn-outline:hover{background:var(--white);color:var(--maroon);border-color:var(--white);}
+.btn-gold{background:var(--gold);border-color:var(--gold);color:var(--charcoal);}
+.btn-gold:hover{background:var(--gold-bright);border-color:var(--gold-bright);}
+.btn-whatsapp{background:var(--whatsapp);border-color:var(--whatsapp);}
+.btn-whatsapp:hover{background:#1DA851;border-color:#1DA851;}
+.btn-block{width:100%;}
+header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(20,17,16,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(217,164,65,.15);transition:padding .3s var(--ease), background .3s var(--ease);padding:16px 0;}
+header.scrolled{padding:8px 0;background:rgba(20,17,16,.98);}
+.header-content{display:flex;justify-content:space-between;align-items:center;}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none;}
+.logo img{height:44px;width:auto;transition:height .3s var(--ease);}
+header.scrolled .logo img{height:36px;}
+.logo-text h1{font-size:1.05rem;color:var(--white);letter-spacing:.5px;font-family:var(--font-display);font-weight:400;}
+.logo-text p{font-size:.68rem;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;}
+nav ul{display:flex;list-style:none;gap:32px;align-items:center;}
+nav ul li a{color:var(--white);text-decoration:none;font-weight:600;font-size:.88rem;position:relative;padding:6px 0;transition:color .3s ease;}
+nav ul li a::after{content:"";position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width .3s var(--ease);}
+nav ul li a:hover{color:var(--gold);}
+nav ul li a:hover::after{width:100%;}
+nav ul li a.nav-cta{background:var(--maroon);padding:10px 20px;border-radius:3px;border:1px solid var(--maroon-bright);}
+nav ul li a.nav-cta::after{display:none;}
+nav ul li a.nav-cta:hover{background:var(--maroon-deep);color:var(--white);}
+.menu-toggle{display:none;cursor:pointer;font-size:1.4rem;color:var(--white);}
+@media (max-width:900px){.menu-toggle{display:block;position:absolute;top:22px;right:20px;}nav ul{display:none;width:100%;flex-direction:column;text-align:center;padding:24px 0 8px;gap:16px;}nav ul.active{display:flex;}.header-content{flex-wrap:wrap;}}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;margin-top:0;background:linear-gradient(180deg, rgba(20,17,16,.55) 0%, rgba(20,17,16,.75) 55%, var(--charcoal) 100%), url('https://scontent.flos3-1.fna.fbcdn.net/v/t39.30808-6/480761604_9251062608343968_347970070325383087_n.jpg?stp=dst-jpg_tt6&cstp=mx960x695&ctp=s960x695&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEcri6e_tGLASzwHAq94NKKHjfgpfMJGiYeN-Cl8wkaJkytvA-1aIrWZY3Hf0yV-8BdUqZ0R0iOiw9Ncva0g0kM&_nc_ohc=XEKPm5GkQNIQ7kNvwEPznqk&_nc_oc=AdpNrpm3ANBHS3Cx4W97Y1c73Tg47sgi6zPQ7U7sbGtyVe9_Q1DVvxAIjGi2Oa1v8r4&_nc_pt=1&_nc_zt=23&_nc_ht=scontent.flos3-1.fna&_nc_gid=EmTAZb9gMrdPLoTuCy1RUQ&_nc_ss=7b2a8&oh=00_AQBIJkkvyUVB__6UXoz-M1jjAiVEFTN-ieQfDEfgCGHMKA&oe=6A561615');background-size:cover;background-position:center 20%;color:var(--white);padding-top:100px;}
+.hero-content{max-width:760px;}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;}
+.hero-badge{background:rgba(255,255,255,.08);border:1px solid rgba(217,164,65,.4);padding:7px 16px;border-radius:30px;font-size:.78rem;font-weight:700;letter-spacing:.5px;color:var(--gold-bright);}
+.hero-content h2{font-size:clamp(2.6rem,6.5vw,5rem);text-transform:uppercase;margin-bottom:22px;line-height:.98;}
+.hero-content h2 em{font-style:normal;color:var(--gold);}
+.hero-content p{font-size:1.2rem;color:rgba(255,255,255,.85);max-width:560px;margin-bottom:38px;font-weight:500;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:56px;}
+.hero-stats{display:flex;gap:44px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.15);padding-top:28px;}
+.hero-stat .num{font-family:var(--font-display);font-size:2.4rem;color:var(--gold);}
+.hero-stat .label{font-size:.78rem;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:1px;margin-top:2px;}
+.scroll-cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.6);font-size:1.3rem;animation:bob 2s infinite;}
+@keyframes bob{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,10px);}}
+@media (max-width:720px){.hero-content h2{font-size:2.4rem;}.hero-actions{flex-direction:column;}.hero-actions .btn{width:100%;}}
+.trust-bar{background:var(--charcoal);padding:26px 0;border-top:1px solid rgba(217,164,65,.15);border-bottom:1px solid rgba(217,164,65,.15);}
+.trust-row{display:flex;justify-content:space-around;flex-wrap:wrap;gap:20px;text-align:center;}
+.trust-item{display:flex;align-items:center;gap:10px;color:var(--stone-light);font-size:.85rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;}
+.trust-item i{color:var(--gold);font-size:1.1rem;}
+.promise{padding:110px 0;background:var(--white);}
+.promise-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+.promise-copy p{color:var(--stone);font-size:1.08rem;margin-bottom:18px;}
+.promise-copy .lead{font-size:1.4rem;color:var(--charcoal);font-weight:700;margin-bottom:22px;}
+.promise-visual{position:relative;}
+.promise-visual .split-frame{position:relative;border-radius:6px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(20,17,16,.35);}
+.promise-visual img{width:100%;height:440px;object-fit:cover;}
+.promise-visual::before{content:"";position:absolute;top:-24px;left:-24px;width:120px;height:120px;border:3px solid var(--gold);border-radius:6px;z-index:-1;}
+@media (max-width:860px){.promise-grid{grid-template-columns:1fr;}}
+.features{padding:100px 0;background:var(--cream);}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;}
+.feature-card{background:var(--white);padding:40px 32px;border-radius:6px;box-shadow:0 10px 30px -12px rgba(20,17,16,.1);transition:transform .4s var(--ease), box-shadow .4s var(--ease);border-top:3px solid transparent;}
+.feature-card:hover{transform:translateY(-8px);box-shadow:0 24px 40px -14px rgba(122,15,15,.2);border-top-color:var(--gold);}
+.feature-card i{font-size:2.2rem;color:var(--maroon);margin-bottom:20px;}
+.feature-card h3{font-size:1.25rem;margin-bottom:12px;color:var(--charcoal);font-family:var(--font-body);font-weight:800;}
+.feature-card p{color:var(--stone);font-size:.96rem;}
+.programs{padding:110px 0;background:var(--charcoal);position:relative;}
+.programs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
+.program-card{background:var(--charcoal-soft);border:1px solid rgba(217,164,65,.15);border-radius:8px;padding:36px 28px;position:relative;overflow:hidden;transition:border-color .3s ease, transform .4s var(--ease);}
+.program-card:hover{transform:translateY(-6px);border-color:var(--gold);}
+.program-card .age{font-family:var(--font-display);font-size:2.6rem;color:var(--gold);opacity:.9;}
+.program-card h3{color:var(--white);font-size:1.3rem;margin:10px 0 12px;font-family:var(--font-body);font-weight:800;}
+.program-card p{color:var(--stone-light);font-size:.92rem;margin-bottom:20px;}
+.program-card .sched{display:flex;align-items:center;gap:8px;color:var(--gold-bright);font-size:.82rem;font-weight:700;}
+.program-card.featured{background:linear-gradient(150deg, var(--maroon) 0%, var(--maroon-deep) 100%);border-color:var(--maroon-bright);}
+.program-card.featured .age,.program-card.featured .sched{color:var(--gold-bright);}
+.program-card.featured h3{color:var(--white);}
+.program-card.featured p{color:rgba(255,255,255,.85);}
+.ribbon{position:absolute;top:16px;right:-30px;background:var(--gold);color:var(--charcoal);padding:4px 34px;font-size:.7rem;font-weight:800;letter-spacing:1px;transform:rotate(35deg);text-transform:uppercase;}
+.coaches-section{padding:110px 0;background:var(--white);}
+.coaches-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px;}
+.coach-card{background:var(--cream);border-radius:8px;overflow:hidden;box-shadow:0 10px 30px -14px rgba(20,17,16,.15);transition:transform .4s var(--ease);}
+.coach-card:hover{transform:translateY(-10px);}
+.coach-img-wrap{position:relative;overflow:hidden;height:320px;}
+.coach-img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);}
+.coach-card:hover .coach-img{transform:scale(1.07);}
+.coach-info{padding:28px;}
+.coach-info h3{color:var(--charcoal);margin-bottom:6px;font-size:1.3rem;font-family:var(--font-body);font-weight:800;}
+.coach-title{color:var(--maroon);font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px;display:block;}
+.coach-bio{margin-bottom:18px;color:var(--stone);font-size:.94rem;}
+.coach-social a{color:var(--maroon);margin-right:14px;font-size:1.1rem;transition:color .3s ease;}
+.coach-social a:hover{color:var(--gold);}
+.results{padding:100px 0;background:linear-gradient(150deg, var(--maroon-deep) 0%, var(--maroon) 100%);color:var(--white);position:relative;overflow:hidden;}
+.results::after{content:"";position:absolute;right:-120px;top:50%;transform:translateY(-50%);width:420px;height:420px;border-radius:50%;border:60px solid rgba(255,255,255,.05);}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px;text-align:center;position:relative;z-index:1;}
+.stat-box .stat-num{font-family:var(--font-display);font-size:clamp(2.6rem,5vw,3.6rem);color:var(--gold-bright);}
+.stat-box .stat-label{font-size:.85rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.85);margin-top:6px;}
+.testimonials{padding:110px 0;background:var(--cream);}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;}
+.testi-card{background:var(--white);padding:36px;border-radius:8px;box-shadow:0 10px 30px -14px rgba(20,17,16,.1);position:relative;}
+.testi-card .stars{color:var(--gold);margin-bottom:16px;font-size:.9rem;}
+.testi-card p.quote{color:var(--charcoal);font-size:1.02rem;margin-bottom:24px;font-style:italic;}
+.testi-person{display:flex;align-items:center;gap:14px;}
+.testi-avatar{width:46px;height:46px;border-radius:50%;background:var(--maroon);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.1rem;}
+.testi-name{font-weight:800;font-size:.92rem;color:var(--charcoal);}
+.testi-role{font-size:.78rem;color:var(--stone);}
+.testi-note{text-align:center;font-size:.8rem;color:var(--stone-light);margin-top:36px;}
+.gallery-section{padding:100px 0;background:var(--white);}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;}
+.gallery-item{position:relative;border-radius:8px;overflow:hidden;height:260px;cursor:pointer;box-shadow:0 8px 24px -12px rgba(20,17,16,.2);}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease), filter .4s ease;}
+.gallery-item:hover img{transform:scale(1.1);}
+.gallery-item::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, transparent 40%, rgba(20,17,16,.85) 100%);opacity:0;transition:opacity .3s ease;}
+.gallery-item:hover::before{opacity:1;}
+.gallery-caption{position:absolute;bottom:0;left:0;right:0;padding:18px;color:var(--white);font-weight:700;font-size:.9rem;transform:translateY(14px);opacity:0;transition:all .35s var(--ease);}
+.gallery-item:hover .gallery-caption{transform:translateY(0);opacity:1;}
+.lightbox{position:fixed;inset:0;background:rgba(20,17,16,.95);display:none;align-items:center;justify-content:center;z-index:2000;padding:30px;}
+.lightbox.active{display:flex;}
+.lightbox img{max-width:90vw;max-height:85vh;border-radius:6px;}
+.lightbox-close{position:absolute;top:24px;right:34px;color:var(--white);font-size:2rem;cursor:pointer;}
+.schedule{padding:100px 0;background:var(--charcoal);}
+.schedule-table{width:100%;border-collapse:collapse;margin-top:10px;}
+.schedule-table th{text-align:left;color:var(--gold);font-size:.78rem;text-transform:uppercase;letter-spacing:1px;padding:16px 20px;border-bottom:2px solid rgba(217,164,65,.3);}
+.schedule-table td{padding:20px;color:var(--stone-light);border-bottom:1px solid rgba(255,255,255,.08);font-size:.95rem;}
+.schedule-table tr:hover td{background:rgba(217,164,65,.05);color:var(--white);}
+.schedule-table td:first-child,.schedule-table th:first-child{color:var(--white);font-weight:800;}
+.schedule-wrap{overflow-x:auto;background:var(--charcoal-soft);border-radius:8px;padding:8px 24px;border:1px solid rgba(217,164,65,.12);}
+.pricing{padding:110px 0;background:var(--cream);}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;}
+.price-card{background:var(--white);border-radius:8px;padding:40px 32px;text-align:center;box-shadow:0 10px 30px -14px rgba(20,17,16,.12);border:2px solid transparent;transition:all .35s var(--ease);}
+.price-card:hover{transform:translateY(-8px);border-color:var(--maroon);}
+.price-card.popular{border-color:var(--gold);position:relative;transform:scale(1.03);}
+.price-card .tag{background:var(--gold);color:var(--charcoal);font-size:.7rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:5px 14px;border-radius:20px;display:inline-block;margin-bottom:16px;}
+.price-card h3{font-size:1.3rem;color:var(--charcoal);margin-bottom:8px;font-family:var(--font-body);font-weight:800;}
+.price-card .price-note{color:var(--stone);font-size:.92rem;margin-bottom:24px;}
+.price-card ul{list-style:none;text-align:left;margin-bottom:28px;}
+.price-card ul li{padding:9px 0;color:var(--stone);font-size:.92rem;border-bottom:1px solid var(--cream);display:flex;gap:10px;align-items:flex-start;}
+.price-card ul li i{color:var(--maroon);margin-top:3px;}
+.faq{padding:100px 0;background:var(--white);}
+.faq-list{max-width:820px;margin:0 auto;}
+.faq-item{border-bottom:1px solid #e8e2d8;}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:24px 4px;cursor:pointer;font-weight:800;font-size:1.05rem;color:var(--charcoal);}
+.faq-q i{color:var(--maroon);transition:transform .3s ease;}
+.faq-item.open .faq-q i{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease);}
+.faq-a p{padding:0 4px 24px;color:var(--stone);font-size:.96rem;max-width:680px;}
+.final-cta{padding:110px 0;text-align:center;color:var(--white);background:linear-gradient(150deg, var(--charcoal) 0%, var(--maroon-deep) 100%);position:relative;overflow:hidden;}
+.final-cta h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:18px;}
+.final-cta p{color:rgba(255,255,255,.8);font-size:1.1rem;max-width:560px;margin:0 auto 36px;}
+.final-cta .cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.contact-section{padding:100px 0;background:var(--cream);}
+.contact-container{display:grid;grid-template-columns:1fr 1fr;gap:50px;max-width:1100px;margin:0 auto;align-items:start;}
+.contact-form{background:var(--white);padding:44px;border-radius:8px;box-shadow:0 14px 40px -18px rgba(20,17,16,.18);}
+.contact-form h3{color:var(--charcoal);margin-bottom:26px;font-size:1.5rem;font-family:var(--font-body);font-weight:800;}
+.form-group{margin-bottom:20px;}
+.form-group label{display:block;margin-bottom:8px;font-weight:700;color:var(--charcoal);font-size:.85rem;}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:13px 14px;border:1.5px solid #e5ddd0;border-radius:5px;font-size:.95rem;font-family:var(--font-body);transition:all .3s ease;background:var(--cream);}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--maroon);outline:none;box-shadow:0 0 0 4px rgba(122,15,15,.12);background:var(--white);}
+.form-group textarea{min-height:130px;resize:vertical;}
+.submit-btn{background:var(--maroon);color:var(--white);border:none;padding:15px 30px;border-radius:5px;cursor:pointer;font-size:.95rem;font-weight:700;transition:all .3s ease;width:100%;}
+.submit-btn:hover{background:var(--maroon-deep);}
+.contact-side{padding-top:8px;}
+.contact-side .info-item{display:flex;gap:16px;margin-bottom:26px;}
+.contact-side .info-item i{color:var(--maroon);font-size:1.3rem;margin-top:4px;}
+.contact-side .info-item h4{font-size:.95rem;margin-bottom:4px;color:var(--charcoal);font-family:var(--font-body);}
+.contact-side .info-item p{color:var(--stone);font-size:.92rem;}
+.map-container{margin-top:8px;}
+.map-container iframe{width:100%;height:320px;border:none;border-radius:8px;border:3px solid var(--maroon);}
+@media (max-width:860px){.contact-container{grid-template-columns:1fr;}}
+footer{background:var(--charcoal);color:var(--white);padding:60px 0 26px;}
+.footer-content{display:flex;justify-content:space-between;flex-wrap:wrap;gap:36px;margin-bottom:36px;}
+.footer-section{flex:1;min-width:230px;}
+.footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.footer-logo img{height:38px;}
+.footer-logo h4{font-family:var(--font-display);font-weight:400;font-size:1.1rem;}
+.footer-section p{color:var(--stone-light);font-size:.9rem;}
+.footer-section h3{margin-bottom:20px;position:relative;display:inline-block;font-size:1rem;font-family:var(--font-body);font-weight:800;letter-spacing:.5px;text-transform:uppercase;}
+.footer-section h3::after{content:"";display:block;width:34px;height:2px;background:var(--gold);margin-top:8px;}
+.contact-info p{margin-bottom:10px;display:flex;align-items:center;gap:10px;color:var(--stone-light);font-size:.9rem;}
+.contact-info i{color:var(--gold);}
+.social-links a{color:var(--white);margin-right:14px;font-size:1.3rem;transition:color .3s ease;}
+.social-links a:hover{color:var(--gold);}
+.copyright{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;text-align:center;color:var(--stone-light);font-size:.85rem;}
+@media (max-width:720px){.footer-content{flex-direction:column;text-align:center;}.footer-logo{justify-content:center;}.contact-info p{justify-content:center;}.promise-visual::before{display:none;}}
+.wa-float{position:fixed;bottom:26px;right:26px;background:var(--whatsapp);color:var(--white);width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 10px 24px rgba(0,0,0,.25);z-index:900;transition:transform .3s ease;text-decoration:none;}
+.wa-float:hover{transform:scale(1.08);}
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="container">
+    <div class="header-content">
+      <a href="#" class="logo">
+        <img src="hope basketball.png" alt="Hope Basketball Academy Logo">
+        <div class="logo-text">
+          <h1>Hope Basketball</h1>
+          <p>Akure, Ondo State</p>
+        </div>
+      </a>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#coaches">Coaches</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact" class="nav-cta">Book Trial</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badges reveal">
+        <span class="hero-badge">Est. 2015</span>
+        <span class="hero-badge">Akure Township Stadium</span>
+        <span class="hero-badge">Certified Coaches</span>
+      </div>
+      <h2 class="reveal reveal-delay-1">Turn Raw Talent Into <em>Real Opportunity</em></h2>
+      <p class="reveal reveal-delay-2">Akure's premier basketball development program — where 20+ players have earned collegiate and professional placements since 2015. Real coaching. Real pathways. Real results.</p>
+      <div class="hero-actions reveal reveal-delay-3">
+        <a href="#contact" class="btn">Book a Free Trial Session</a>
+        <a href="https://wa.me/+2348169760900" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> Ask a Coach Now</a>
+      </div>
+      <div class="hero-stats reveal reveal-delay-3">
+        <div class="hero-stat"><div class="num" data-count="20">0</div><div class="label">Players Placed</div></div>
+        <div class="hero-stat"><div class="num" data-count="9">0</div><div class="label">Years Running</div></div>
+        <div class="hero-stat"><div class="num" data-count="150">0</div><div class="label">Active Athletes</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue"><i class="fas fa-chevron-down"></i></div>
+</section>
+
+<div class="trust-bar">
+  <div class="container trust-row">
+    <div class="trust-item"><i class="fas fa-check-circle"></i> Since 2015</div>
+    <div class="trust-item"><i class="fas fa-medal"></i> 20+ Placements</div>
+    <div class="trust-item"><i class="fas fa-map-marker-alt"></i> Akure Township Stadium</div>
+    <div class="trust-item"><i class="fas fa-user-shield"></i> Certified Coaching Staff</div>
+  </div>
+</div>
+
+<section class="promise">
+  <div class="container promise-grid">
+    <div class="promise-copy reveal">
+      <span class="eyebrow">Why parents choose us</span>
+      <h2 class="section-title">Is your child getting real coaching — or just supervised play?</h2>
+      <p class="lead">Most youth programs keep kids busy. We build careers.</p>
+      <p>Every session at Hope Basketball Academy is built around a development plan, not just a scrimmage. Our coaches track individual progress across shooting mechanics, footwork, game IQ, and physical conditioning — so you always know exactly how your child is improving.</p>
+      <p>That's the difference between a program that fills an afternoon, and one that opens a pathway to collegiate or professional basketball.</p>
+      <a href="#programs" class="btn">See Our Programs</a>
+    </div>
+    <div class="promise-visual reveal reveal-delay-2">
+      <div class="split-frame">
+        <img src="child.jpg" alt="Team practice session">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">The Hope difference</span>
+      <h2 class="section-title">Why Train With Us</h2>
+      <p class="section-sub">Three commitments that set our program apart in Ondo State.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal"><i class="fas fa-basketball-ball"></i><h3>Professional Coaching</h3><p>Our certified coaches have experience training at national and international levels.</p></div>
+      <div class="feature-card reveal reveal-delay-1"><i class="fas fa-medal"></i><h3>Proven Results</h3><p>20+ players developed and placed in collegiate and professional programs.</p></div>
+      <div class="feature-card reveal reveal-delay-2"><i class="fas fa-home"></i><h3>Local Focus</h3><p>Committed to developing basketball talent right here in Ondo State.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Find your pathway</span>
+      <h2 class="section-title on-dark">Programs by Age &amp; Ambition</h2>
+      <p class="section-sub on-dark">Every player starts somewhere different. Our program meets them there — and takes them further.</p>
+    </div>
+    <div class="programs-grid">
+      <div class="program-card reveal">
+        <div class="age">U10</div>
+        <h3>Junior Foundations</h3>
+        <p>Ball handling, coordination, and a genuine love for the game — built through play-based fundamentals.</p>
+        <div class="sched"><i class="fas fa-clock"></i> Sat, 9–11am</div>
+      </div>
+      <div class="program-card reveal reveal-delay-1">
+        <div class="age">U14</div>
+        <h3>Development Squad</h3>
+        <p>Structured skill progression, positional training, and introduction to competitive game play.</p>
+        <div class="sched"><i class="fas fa-clock"></i> Mon / Wed, 4–6pm</div>
+      </div>
+      <div class="program-card featured reveal reveal-delay-2">
+        <span class="ribbon">Popular</span>
+        <div class="age">U18</div>
+        <h3>Elite Prep</h3>
+        <p>High-intensity training for players targeting collegiate scouting and national-level competition.</p>
+        <div class="sched"><i class="fas fa-clock"></i> Mon / Wed / Fri, 4–6:30pm</div>
+      </div>
+      <div class="program-card reveal reveal-delay-3">
+        <div class="age">18+</div>
+        <h3>Open Athlete Track</h3>
+        <p>Conditioning and skills sessions for adult players staying competitive or returning to the game.</p>
+        <div class="sched"><i class="fas fa-clock"></i> Tue / Thu, 6–8pm</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="coaches-section" id="coaches">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Led by experience</span>
+      <h2 class="section-title">Meet Our Coaching Staff</h2>
+      <p class="section-sub">Coaches who've played and won at the highest levels available to them — now building the next generation.</p>
+    </div>
+    <div class="coaches-grid">
+      <div class="coach-card reveal">
+        <div class="coach-img-wrap">
+          <img src="coach tosin.jpg" alt="Head Coach" class="coach-img">
+        </div>
+        <div class="coach-info">
+          <h3>Tosin Olajubutu</h3>
+          <span class="coach-title">Head Coach / Founder</span>
+          <p class="coach-bio">Former national team player with 15+ years coaching experience. Specializes in player development and team strategy.</p>
+          <div class="coach-social">
+            <a href="https://www.linkedin.com/in/tosin-olajubutu-b3479a1a9/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/HopeBasketNg" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:hopebasketballacademy7@gmail.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="coach-card reveal reveal-delay-1">
+        <div class="coach-img-wrap">
+          <img src="https://images.pexels.com/photos/31233910/pexels-photo-31233910.jpeg" alt="Assistant Coach" class="coach-img">
+        </div>
+        <div class="coach-info">
+          <h3>Adeola Johnson</h3>
+          <span class="coach-title">Assistant Coach</span>
+          <p class="coach-bio">Strength and conditioning specialist with expertise in athletic performance and injury prevention.</p>
+          <div class="coach-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="coach-card reveal reveal-delay-2">
+        <div class="coach-img-wrap">
+          <img src="https://images.pexels.com/photos/31185169/pexels-photo-31185169.jpeg" alt="Skills Coach" class="coach-img">
+        </div>
+        <div class="coach-info">
+          <h3>Emeka Okoro</h3>
+          <span class="coach-title">Skills Development Coach</span>
+          <p class="coach-bio">Former professional player specializing in guard skills, shooting technique, and ball handling.</p>
+          <div class="coach-social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="results" id="results">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" style="color:var(--gold-bright)">The proof</span>
+      <h2 class="section-title on-dark">We Don't Just Run Drills. We Build Pathways.</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-box reveal"><div class="stat-num" data-count="20">0</div><div class="stat-label">Players Placed</div></div>
+      <div class="stat-box reveal reveal-delay-1"><div class="stat-num" data-count="9">0</div><div class="stat-label">Years of Training</div></div>
+      <div class="stat-box reveal reveal-delay-2"><div class="stat-num" data-count="150">0</div><div class="stat-label">Active Athletes</div></div>
+      <div class="stat-box reveal reveal-delay-3"><div class="stat-num" data-count="12">0</div><div class="stat-label">Tournaments Won</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">What families say</span>
+      <h2 class="section-title">Trusted by Parents Across Akure</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="quote">"My son's confidence on and off the court has completely transformed since joining. The coaches genuinely care about each player's growth."</p>
+        <div class="testi-person"><div class="testi-avatar">B</div><div><div class="testi-name">Parent, Bunmi A.</div><div class="testi-role">U14 Development Squad</div></div></div>
+      </div>
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="quote">"This isn't just a holiday activity — it's structured, professional, and it shows in how much my daughter has improved in one season."</p>
+        <div class="testi-person"><div class="testi-avatar">F</div><div><div class="testi-name">Parent, Funke O.</div><div class="testi-role">U10 Junior Foundations</div></div></div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="quote">"Coach Tosin's guidance directly helped me earn a spot on a collegiate program. Hope Basketball Academy changed my trajectory."</p>
+        <div class="testi-person"><div class="testi-avatar">D</div><div><div class="testi-name">Damilare K.</div><div class="testi-role">Elite Prep Alumnus</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section" id="gallery">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Life at the academy</span>
+      <h2 class="section-title">Academy Gallery</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal" data-full="https://images.pexels.com/photos/14972595/pexels-photo-14972595.jpeg?auto=compress&cs=tinysrgb&w=1200">
+        <img src="471474806_8809538412496392_8471781056897805887_n.jpg" alt="Team practice session">
+        <div class="gallery-caption">Team Practice Session</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1" data-full="https://images.pexels.com/photos/32797651/pexels-photo-32797651.jpeg?auto=compress&cs=tinysrgb&w=1200">
+        <img src="483786247_9251062375010658_8727305139800718661_n.jpg" alt="Basketball game">
+        <div class="gallery-caption">Competitive Game</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2" data-full="https://images.pexels.com/photos/14972591/pexels-photo-14972591.jpeg?auto=compress&cs=tinysrgb&w=1200">
+        <img src="484931246_1074944151316379_6886884858291757686_n.jpg" alt="Skills training">
+        <div class="gallery-caption">Skills Training</div>
+      </div>
+      <div class="gallery-item reveal" data-full="https://images.pexels.com/photos/6766998/pexels-photo-6766998.jpeg?auto=compress&cs=tinysrgb&w=1200">
+        <img src="480192187_9251062391677323_5732671432279511752_n.jpg" alt="Team huddle">
+        <div class="gallery-caption">Team Huddle</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1" data-full="https://images.pexels.com/photos/6767230/pexels-photo-6767230.jpeg?auto=compress&cs=tinysrgb&w=1200">
+        <img src="484123360_9251062365010659_4608180558326155433_n.jpg" alt="Basketball drills">
+        <div class="gallery-caption">Drills Session</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2" data-full="https://images.pexels.com/photos/6767323/pexels-photo-6767323.jpeg?auto=compress&cs=tinysrgb&w=1200">
+        <img src="483864721_9251062435010652_7733294507745277517_n.jpg" alt="Award ceremony">
+        <div class="gallery-caption">Full Court Action</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lightboxClose">&times;</span>
+  <img id="lightboxImg" src="" alt="Gallery preview">
+</div>
+
+<section class="schedule">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Plan your week</span>
+      <h2 class="section-title on-dark">Weekly Training Schedule</h2>
+    </div>
+    <div class="schedule-wrap reveal">
+      <table class="schedule-table">
+        <thead><tr><th>Program</th><th>Days</th><th>Time</th><th>Location</th></tr></thead>
+        <tbody>
+          <tr><td>Junior Foundations (U10)</td><td>Saturday</td><td>9:00 – 11:00 AM</td><td>Akure Township Stadium</td></tr>
+          <tr><td>Development Squad (U14)</td><td>Monday, Wednesday</td><td>4:00 – 6:00 PM</td><td>Akure Township Stadium</td></tr>
+          <tr><td>Elite Prep (U18)</td><td>Monday, Wednesday, Friday</td><td>4:00 – 6:30 PM</td><td>Akure Township Stadium</td></tr>
+          <tr><td>Open Athlete Track (18+)</td><td>Tuesday, Thursday</td><td>6:00 – 8:00 PM</td><td>Akure Township Stadium</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="pricing">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Registration</span>
+      <h2 class="section-title">Choose Your Track</h2>
+      <p class="section-sub">Every tier includes full access to coaching, drills, and program events. Contact us for current term pricing.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <h3>Junior Foundations</h3>
+        <p class="price-note">Ages 6–10 · Contact for pricing</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Fundamentals-based coaching</li>
+          <li><i class="fas fa-check"></i> 1 session per week</li>
+          <li><i class="fas fa-check"></i> Progress updates for parents</li>
+        </ul>
+        <a href="#contact" class="btn btn-block">Request Pricing</a>
+      </div>
+      <div class="price-card popular reveal reveal-delay-1">
+        <span class="tag">Most Popular</span>
+        <h3>Development Squad</h3>
+        <p class="price-note">Ages 11–14 · Contact for pricing</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Structured skill progression</li>
+          <li><i class="fas fa-check"></i> 2 sessions per week</li>
+          <li><i class="fas fa-check"></i> Competitive game exposure</li>
+        </ul>
+        <a href="#contact" class="btn btn-block">Request Pricing</a>
+      </div>
+      <div class="price-card reveal reveal-delay-2">
+        <h3>Elite Prep</h3>
+        <p class="price-note">Ages 15–18 · Contact for pricing</p>
+        <ul>
+          <li><i class="fas fa-check"></i> High-intensity training</li>
+          <li><i class="fas fa-check"></i> 3 sessions per week</li>
+          <li><i class="fas fa-check"></i> Scouting &amp; placement support</li>
+        </ul>
+        <a href="#contact" class="btn btn-block">Request Pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Questions, answered</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item open">
+        <div class="faq-q"><span>What equipment does my child need to get started?</span><i class="fas fa-plus"></i></div>
+        <div class="faq-a"><p>Just basketball shoes and comfortable athletic wear. We provide balls and all training equipment for every session.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Is there a tryout to join?</span><i class="fas fa-plus"></i></div>
+        <div class="faq-a"><p>No tryout is required for Junior Foundations or Development Squad. Elite Prep involves a short skills assessment so coaches can place players at the right intensity level.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Can I book a free trial before committing?</span><i class="fas fa-plus"></i></div>
+        <div class="faq-a"><p>Yes — every new player is welcome to one free trial session before registering, so you and your child can experience our coaching firsthand.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>What is the refund or pause policy?</span><i class="fas fa-plus"></i></div>
+        <div class="faq-a"><p>We understand plans change. Reach out to our team directly and we'll work with you on pausing or adjusting registration.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Do you help players get scouted or placed?</span><i class="fas fa-plus"></i></div>
+        <div class="faq-a"><p>Yes — our Elite Prep track includes direct scouting exposure and placement support, building on our track record of 20+ collegiate and professional placements.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <span class="eyebrow reveal" style="justify-content:center;color:var(--gold-bright)">Limited spots this term</span>
+    <h2 class="reveal reveal-delay-1">Your Child's Next Level Starts With One Session.</h2>
+    <p class="reveal reveal-delay-2">Spots for this term are limited — book your free trial before registration closes.</p>
+    <div class="cta-row reveal reveal-delay-3">
+      <a href="#contact" class="btn btn-gold">Reserve My Spot</a>
+      <a href="https://wa.me/+2348169760900" class="btn btn-outline" target="_blank"><i class="fab fa-whatsapp"></i> Message Us on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Get started</span>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-sub">Fill out the form or reach us directly — we typically respond within a few hours.</p>
+    </div>
+    <div class="contact-container">
+      <div class="contact-form reveal">
+        <h3>Send Us a Message</h3>
+        <form action="#" method="POST">
+          <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" required></div>
+          <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" required></div>
+          <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone"></div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>Select a subject</option>
+              <option value="registration">Registration Inquiry</option>
+              <option value="training">Training Programs</option>
+              <option value="partnership">Partnership Opportunities</option>
+              <option value="other">Other Questions</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="message">Your Message</label><textarea id="message" name="message" required></textarea></div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+      <div class="contact-side reveal reveal-delay-1">
+        <div class="info-item"><i class="fas fa-map-marker-alt"></i><div><h4>Visit Us</h4><p>Sports Complex, Akure Township Stadium, Ondo State</p></div></div>
+        <div class="info-item"><i class="fas fa-phone"></i><div><h4>Call or WhatsApp</h4><p>+234 816 976 0900</p></div></div>
+        <div class="info-item"><i class="fas fa-envelope"></i><div><h4>Email</h4><p>hopebasketballacademy7@gmail.com</p></div></div>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.427242425673!2d5.224682774915039!3d7.224632492840183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10478f26a6a1f6a9%3A0x1d6b2b7b9b4b4b4b!2sAkure%20Township%20Stadium!5e0!3m2!1sen!2sng!4v1620000000000!5m2!1sen!2sng" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <img src="hope basketball.png" alt="Hope Basketball Academy Logo">
+          <h4>Hope Basketball Academy</h4>
+        </div>
+        <p>Developing basketball excellence in Akure since 2015.</p>
+      </div>
+      <div class="footer-section contact-info">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Sports Complex, Akure, Ondo State</p>
+        <p><i class="fas fa-phone"></i> +234 816 976 0900</p>
+        <p><i class="fas fa-envelope"></i> hopebasketballacademy7@gmail.com</p>
+      </div>
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-links">
+          <a href="https://web.facebook.com/hopebasketballacademy" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://x.com/HopeBasketNg" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/hopebasketballacademy7/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/+2348169760900" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/in/tosin-olajubutu-b3479a1a9/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright"><p>&copy; 2026 Hope Basketball Academy, Akure. All Rights Reserved.</p></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/+2348169760900" class="wa-float" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('nav ul');
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+  menuToggle.innerHTML = navMenu.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+});
+document.querySelectorAll('nav ul li a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+  });
+});
+
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+revealEls.forEach(el => revealObserver.observe(el));
+
+const counters = document.querySelectorAll('[data-count]');
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.getAttribute('data-count'), 10);
+      const duration = 1400;
+      const start = performance.now();
+      function tick(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.floor(eased * target) + (progress >= 1 ? '+' : '');
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.4 });
+counters.forEach(el => counterObserver.observe(el));
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+document.querySelectorAll('.gallery-item').forEach(item => {
+  item.addEventListener('click', () => {
+    lightboxImg.src = item.getAttribute('data-full');
+    lightbox.classList.add('active');
+  });
+});
+document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('active'));
+lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+
+document.querySelectorAll('.faq-item').forEach(item => {
+  const q = item.querySelector('.faq-q');
+  const a = item.querySelector('.faq-a');
+  if (item.classList.contains('open')) a.style.maxHeight = a.scrollHeight + 'px';
+  q.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight = null;
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      a.style.maxHeight = a.scrollHeight + 'px';
+    }
+  });
+});
+</script>
+</body>
+</html>
